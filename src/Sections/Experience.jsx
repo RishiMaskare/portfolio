@@ -21,17 +21,7 @@ const experiences = [
       "Fixed bugs & improved UI across projects",
       "Maintained consistent, high-quality contributions",
     ],
-  },
-  {
-    role: "Open Source Contributor",
-    company: "JWoC '26",
-    duration: "Feb 2026 – Mar 2026",
-    description: [
-      "Contributed to multiple repositories",
-      "Enhanced UI & resolved key issues",
-      "Collaborated in open-source environment",
-    ],
-  },
+  }
 ];
 
 function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
@@ -138,11 +128,11 @@ export default function Experience() {
   const lineSize = useTransform(scrollYProgress, (v) => `${v * 100}%`);
 
   return (
-    <section id="experience" className="relative bg-black text-white pb-52">
+    <section id="experience" className="relative bg-black text-white pb-32">
       <div
         ref={sceneRef}
         style={{ height: `${SCENE_HEIGHT_VH}vh`, minHeight: isMobile ? `${220 * experiences.length}vh` : '120vh' }}
-        className="relative pb-40"
+        className="relative"
       >
         <div className="sticky top-0 h-screen flex flex-col overflow-visible">
           <h2 className="text-4xl sm:text-5xl font-semibold mt-10 text-center tracking-tight">
